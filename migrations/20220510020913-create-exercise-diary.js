@@ -20,9 +20,6 @@ module.exports = {
       date: {
         type: Sequelize.DATE
       },
-      exerciseId: {
-        type: Sequelize.INTEGER
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

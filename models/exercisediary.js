@@ -18,7 +18,6 @@ module.exports = (sequelize, DataTypes) => {
     caloriesBurned: DataTypes.INTEGER,
     time: DataTypes.INTEGER,
     date: DataTypes.DATE,
-    exerciseId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'ExerciseDiary',

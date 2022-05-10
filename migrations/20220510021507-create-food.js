@@ -11,6 +11,9 @@ module.exports = {
       food: {
         type: Sequelize.STRING
       },
+      foodDiaryId: {
+        type: Sequelize.INTEGER
+      },
       calories: {
         type: Sequelize.INTEGER
       },

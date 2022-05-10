@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Exercise.init({
+    exerciseDiaryId: DataTypes.INTEGER, 
     isCardio: DataTypes.BOOLEAN,
     sets: DataTypes.INTEGER,
     reps: DataTypes.INTEGER,

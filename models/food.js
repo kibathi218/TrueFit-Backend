@@ -10,15 +10,16 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Food.belongsTo(models.FoodDiary, {foreignKey: ''})
     }
   }
   Food.init({
     food: DataTypes.STRING,
+    foodDiaryId: DataTypes.INTEGER,
     calories: DataTypes.INTEGER,
     carbs: DataTypes.INTEGER,
     fat: DataTypes.INTEGER,
-    protein: DataTypes.INTEGER
+    protein: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'Food',

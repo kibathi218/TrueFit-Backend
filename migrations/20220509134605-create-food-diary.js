@@ -26,9 +26,6 @@ module.exports = {
       date: {
         type: Sequelize.DATE
       },
-      foodId: {
-        type: Sequelize.INTEGER
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

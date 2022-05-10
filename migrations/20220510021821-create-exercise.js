@@ -8,6 +8,9 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      exerciseDiaryId: {
+        type: Sequelize.INTEGER
+      },
       isCardio: {
         type: Sequelize.BOOLEAN
       },
