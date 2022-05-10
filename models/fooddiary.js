@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       FoodDiary.belongsTo(models.User, {foreignKey: 'userId'})
+      FoodDiary.hasMany(models.Food, {foreignKey: 'foodId'})
     }
   }
   FoodDiary.init({
