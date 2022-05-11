@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
     carbs: DataTypes.INTEGER,
     fat: DataTypes.INTEGER,
     protein: DataTypes.INTEGER,
-    date: DataTypes.DATE,
+    date: DataTypes.STRING,
     
   }, {
     sequelize,

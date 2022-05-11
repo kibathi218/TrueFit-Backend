@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     caloriesBurned: DataTypes.INTEGER,
     time: DataTypes.INTEGER,
-    date: DataTypes.DATE,
+    date: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'ExerciseDiary',
