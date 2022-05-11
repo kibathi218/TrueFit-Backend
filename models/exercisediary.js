@@ -1,6 +1,6 @@
 'use strict';
 const {
-  Model
+  Model, STRING
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class ExerciseDiary extends Model {
@@ -23,6 +23,7 @@ module.exports = (sequelize, DataTypes) => {
         key: 'id'
       }
     },
+    exerciseName: DataTypes.STRING,
     caloriesBurned: DataTypes.INTEGER,
     time: DataTypes.INTEGER,
     date: DataTypes.STRING,

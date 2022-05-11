@@ -3,7 +3,7 @@ const controller = require('../controllers/FoodDiaryController')
 // const middleware = require('../middleware')
 
 Router.get(
-    '/food-diary/:user_id',
+    '/:user_id',
     controller.GetFoodDiary
 )
 Router.post(

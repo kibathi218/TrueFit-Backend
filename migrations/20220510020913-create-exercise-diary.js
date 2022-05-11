@@ -16,6 +16,9 @@ module.exports = {
           key: 'id'
         }
       },
+      exerciseName: {
+        type: Sequelize.STRING
+      },
       caloriesBurned: {
         type: Sequelize.INTEGER
       },

@@ -16,6 +16,9 @@ module.exports = {
           key: 'id'
         }
       },
+      foodName: {
+        type: Sequelize.STRING
+      },
       calories: {
         type: Sequelize.INTEGER
       },
