@@ -23,6 +23,7 @@ module.exports = (sequelize, DataTypes) => {
         key: 'id'
       }
     },
+    foodName: DataTypes.STRING,
     calories: DataTypes.INTEGER,
     carbs: DataTypes.INTEGER,
     fat: DataTypes.INTEGER,
