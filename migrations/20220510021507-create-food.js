@@ -12,8 +12,13 @@ module.exports = {
         type: Sequelize.STRING
       },
       foodDiaryId: {
-        type: Sequelize.INTEGER
-      },
+      type: Sequelize.INTEGER,
+      onDelete: 'CASCADE',
+      references: {
+        model: 'foodDiaries',
+        key: 'id'
+      }
+    },
       calories: {
         type: Sequelize.INTEGER
       },

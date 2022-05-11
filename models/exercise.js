@@ -14,7 +14,14 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Exercise.init({
-    exerciseDiaryId: DataTypes.INTEGER, 
+    exerciseDiaryId: {
+      type: DataTypes.INTEGER,
+      onDelete: 'CASCADE',
+      references: {
+        model: 'exerciseDiaries',
+        key: 'id'
+      }
+    }, 
     isCardio: DataTypes.BOOLEAN,
     sets: DataTypes.INTEGER,
     reps: DataTypes.INTEGER,

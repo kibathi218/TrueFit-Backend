@@ -9,8 +9,13 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       exerciseDiaryId: {
-        type: Sequelize.INTEGER
-      },
+      type: Sequelize.INTEGER,
+      onDelete: 'CASCADE',
+      references: {
+        model: 'exerciseDiaries',
+        key: 'id'
+      }
+    }, 
       isCardio: {
         type: Sequelize.BOOLEAN
       },

@@ -15,7 +15,14 @@ module.exports = (sequelize, DataTypes) => {
   }
   Food.init({
     food: DataTypes.STRING,
-    foodDiaryId: DataTypes.INTEGER,
+    foodDiaryId: {
+      type: DataTypes.INTEGER,
+      onDelete: 'CASCADE',
+      references: {
+        model: 'foodDiaries',
+        key: 'id'
+      }
+    },
     calories: DataTypes.INTEGER,
     carbs: DataTypes.INTEGER,
     fat: DataTypes.INTEGER,

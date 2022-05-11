@@ -15,7 +15,14 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   ExerciseDiary.init({
-    userId: DataTypes.INTEGER,
+    userId: {
+      type: DataTypes.INTEGER,
+      onDelete: 'CASCADE',
+      references: {
+        model: 'users',
+        key: 'id'
+      }
+    },
     caloriesBurned: DataTypes.INTEGER,
     time: DataTypes.INTEGER,
     date: DataTypes.DATE,

@@ -15,7 +15,14 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   FoodDiary.init({
-    userId: DataTypes.INTEGER,
+    userId: {
+      type: DataTypes.INTEGER,
+      onDelete: 'CASCADE',
+      references: {
+        model: 'users',
+        key: 'id'
+      }
+    },
     calories: DataTypes.INTEGER,
     carbs: DataTypes.INTEGER,
     fat: DataTypes.INTEGER,
