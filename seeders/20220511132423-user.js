@@ -11,7 +11,9 @@ module.exports = {
           email: 'sam@email.com',
           password: '123',
           height: '5ft 7in',
-          weight: 155
+          weight: 155,
+          createdAt: new Date(),
+          updatedAt: new Date()
         }
       ],
       {
@@ -20,7 +22,9 @@ module.exports = {
           email: 'joe@email.com',
           password: '123',
           height: '5ft 9in',
-          weight: 145
+          weight: 145,
+          createdAt: new Date(),
+          updatedAt: new Date()
 
       }
     )

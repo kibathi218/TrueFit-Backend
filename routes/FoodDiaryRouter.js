@@ -10,5 +10,13 @@ Router.post(
     '/:user_id',
     controller.CreateFoodDiary
 )
+Router.put(
+    '/:food_id',
+    controller.UpdateFoodDiary
+)
+Router.delete(
+    '/:food_id',
+    controller.DeleteFood
+)
 
 module.exports = Router
