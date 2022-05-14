@@ -34,6 +34,9 @@ module.exports = {
       date: {
         type: Sequelize.STRING
       },
+      meal: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: true,
         type: Sequelize.DATE
