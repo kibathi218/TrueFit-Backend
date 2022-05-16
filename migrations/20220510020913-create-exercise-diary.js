@@ -10,11 +10,11 @@ module.exports = {
       },
       userId: {
         type: Sequelize.INTEGER,
-        onDelete: 'CASCADE',
-        references: {
-          model: 'users',
-          key: 'id'
-        }
+        // onDelete: 'CASCADE',
+        // references: {
+        //   model: 'users',
+        //   key: 'id'
+        // }
       },
       exerciseName: {
         type: Sequelize.STRING

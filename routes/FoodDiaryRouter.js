@@ -21,9 +21,9 @@ Router.post(
     controller.CreateFoodDiary
 )
 Router.put(
-    '/:food_id',
-    middleware.stripToken,
-    middleware.verifyToken,
+    '/edit/:food_id',
+    // middleware.stripToken,
+    // middleware.verifyToken,
     controller.UpdateFoodDiary
 )
 Router.delete(
