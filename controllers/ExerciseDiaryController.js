@@ -9,7 +9,7 @@ const CreateExerciseDiary = async (req, res) => {
             ...req.body
         }
 
-        const newExericseDiary = await ExericseDiary.create(exerciseDiaryBody)
+        const newExericseDiary = await ExerciseDiary.create(exerciseDiaryBody)
         console.log(userId)
         res.send(newExericseDiary) 
 
@@ -70,8 +70,8 @@ const GetExerciseByIdNew = async (req, res) => {
 
 module.exports = {
     CreateExerciseDiary,
-    GetExerciseDiary,
-    UpdateExerciseDiary,
-    DeleteExercise,
-    GetExerciseByIdNew
+    GetExerciseByIdNew,
+    DeleteExericse,
+    GetExericseDiary,
+    UpdateExericseDiary
 }
