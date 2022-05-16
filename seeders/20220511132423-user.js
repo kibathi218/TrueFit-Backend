@@ -6,27 +6,19 @@ module.exports = {
       'users',
       [
         {
-          firstName: 'Sam',
-          lastName: 'Kibathi',
-          email: 'sam@email.com',
-          password: '123',
-          height: '5ft 7in',
-          weight: 155,
-          createdAt: new Date(),
-          updatedAt: new Date()
+          firstName: 'Joe',
+            lastName: 'Manning',
+            email: 'joe@email.com',
+            passwordDigest: '123',
+            height: '5ft 9in',
+            weight: 145,
+            createdAt: new Date(),
+            updatedAt: new Date()
+  
         }
+        
       ],
-      {
-        firstName: 'Joe',
-          lastName: 'Manning',
-          email: 'joe@email.com',
-          password: '123',
-          height: '5ft 9in',
-          weight: 145,
-          createdAt: new Date(),
-          updatedAt: new Date()
-
-      }
+      
     )
   },
 
