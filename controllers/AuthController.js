@@ -60,10 +60,15 @@ const CheckSession = async (req, res) => {
   res.send(payload)
 }
 
+const Auth = () => {
+
+}
+
 
 module.exports = {
   Login,
   Register,
   UpdatePassword,
-  CheckSession
+  CheckSession,
+  Auth
 }

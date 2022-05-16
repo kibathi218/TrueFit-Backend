@@ -40,3 +40,5 @@ module.exports = {
     return queryInterface.bulkDelete('exerciseDiaries', null, {})
   }
 };
+
+///
