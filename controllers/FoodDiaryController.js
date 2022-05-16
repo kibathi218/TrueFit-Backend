@@ -10,6 +10,7 @@ const CreateFoodDiary = async (req, res) => {
         }
 
         const newFoodDiary = await FoodDiary.create(foodDiaryBody)
+        console.log(userId)
         res.send(newFoodDiary) 
 
     } catch (error) {
