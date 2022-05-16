@@ -54,9 +54,24 @@ const DeleteFood = async (req, res) => {
     }
 }
 
+
+const GetFoodByIdNew = async (req, res) => {
+    try{
+        let foodId = parseInt(req.params.food_id)
+        const foodById= await FoodDiary.findOne(
+            { where: { id: foodId } })
+            res.send(foodById)
+
+    } catch (error) {
+        throw error
+    }
+}
+
+
 module.exports = {
     CreateFoodDiary,
     GetFoodDiary,
     UpdateFoodDiary,
-    DeleteFood
+    DeleteFood,
+    GetFoodByIdNew
 }

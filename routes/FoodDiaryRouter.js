@@ -8,6 +8,12 @@ Router.get(
     middleware.verifyToken,
     controller.GetFoodDiary,
 )
+Router.get(
+    '/edit/:food_id',
+    middleware.stripToken,
+    middleware.verifyToken,
+    controller.GetFoodByIdNew,
+)
 Router.post(
     '/:user_id',
     middleware.stripToken,
@@ -21,7 +27,7 @@ Router.put(
     controller.UpdateFoodDiary
 )
 Router.delete(
-    '/:food_id',
+    '/edit/:food_id',
     middleware.stripToken,
     middleware.verifyToken,
     controller.DeleteFood
