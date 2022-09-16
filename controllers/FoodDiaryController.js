@@ -54,18 +54,31 @@ const DeleteFood = async (req, res) => {
     }
 }
 
-
 const GetFoodByIdNew = async (req, res) => {
-    try{
-        let foodId = parseInt(req.params.food_id)
-        const foodById= await FoodDiary.findOne(
-            { where: { id: foodId } })
-            res.send(foodById)
-
+    try {
+        const { id } = req.params;
+        const food = await Food.findById(id)
+        if (food) {
+            return res.status(200).json({ food });
+        }
+        return res.status(404).send('Review with the specified ID does not exists');
     } catch (error) {
-        throw error
+        return res.status(500).send(error.message);
     }
-}
+  }
+
+
+// const GetFoodByIdNew = async (req, res) => {
+//     try{
+//         let foodId = parseInt(req.params.food_id)
+//         const foodById= await FoodDiary.findOne(
+//             { where: { id: foodId } })
+//             res.send(foodById)
+
+//     } catch (error) {
+//         throw error
+//     }
+// }
 
 
 module.exports = {
